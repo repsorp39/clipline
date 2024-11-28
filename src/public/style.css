@@ -1,0 +1,115 @@
+@font-face {
+    font-family: "Fantasy";
+    src: url("./assets/DynaPuff-VariableFont_wdth\,wght.ttf");
+}
+@font-face {
+    font-family: "RedHat";
+    src: url("./assets/RedHatText-Regular.ttf");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 16px;
+}
+
+h1{
+    font-size: 2.5em;
+    text-align: center;
+    font-family: "Fantasy";
+}
+
+h3{
+    font-family: "Fantasy";
+    font-size: 2em;
+    text-align: center;
+}
+
+p{
+    font-size: 1.1em;
+    text-align: center;
+    font-family: "RedHat";
+}
+
+h1 ,h3,p{
+    margin-top: 40px;
+}
+
+body{
+    background-color: hsl(193, 38%, 86%);
+}
+
+label,button{
+    display: block;
+}
+
+form{
+    width: 380px;
+    margin: 50px auto;
+    background-color: white;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+@media screen and (max-width:400px) {
+    form{
+        width: 270px;
+    }
+
+    h1 ,h3,p{
+        margin-top: 25px;
+    }
+
+    h1{
+      font-size: 1.5em;  
+    }
+    p{
+        font-size: 0.9em;
+    }
+    
+}
+
+input,button{
+    margin-bottom: 25px;
+    width: 100%;
+    font-family: "RedHat";
+}
+
+input{
+    outline: none;
+    height: 30px;
+}
+
+label{
+    text-align: center;
+    margin: 10px 0;
+    font-family: "Fantasy";
+}
+
+button{
+    padding: 8px;
+    font-family: "Fantasy";
+    border-radius: 9px;
+    color: white;
+    background-color: hsl(217, 19%, 24%);
+}
+
+.my-clipboard{
+    min-height:90vh ;
+    width: 80%;
+    padding: 15px;
+    margin: 30px auto 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    outline: none;
+}
+
+h5{
+    font-family: "Fantasy";
+    font-size: 1.2em;
+    margin: 15px;
+}
