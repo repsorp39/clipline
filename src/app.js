@@ -8,11 +8,7 @@ const mongooseSanitize = require("express-mongo-sanitize");
 const { createServer } = require("http");
 
 const app = express();
-
-
 dbConnect();
-
-
 app.use(mongooseSanitize());
 app.use(morgan("dev"));
 app.use(express.json());
