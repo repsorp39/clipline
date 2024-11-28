@@ -1,5 +1,4 @@
 const Clipboard = require("../models/Clipboard");
-const { io } = require("./socket-init") ;
 
 const startCollection = async (req,res,next) => {
         try {
