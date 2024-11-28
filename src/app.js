@@ -1,5 +1,4 @@
 const express = require("express");
-const morgan = require("morgan");
 const dbConnect = require("./db/dbConnect");
 const errorHandler = require("./middleware/errorHandler");
 
@@ -10,7 +9,6 @@ const { createServer } = require("http");
 const app = express();
 dbConnect();
 app.use(mongooseSanitize());
-app.use(morgan("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended:false }));
 
