@@ -6,7 +6,7 @@ const saveUpdate  = (socket) =>{
         await Clipboard.updateOne({ name:data.origin } ,{ content:data.content.replace(/\n/g,'<br>') });
         socket.broadcast.emit("saved" , {
             origin:data.origin,
-            content:data..content.replace(/\n/g,'<br>')
+            content:data.content.replace(/\n/g,'<br>')
         })
     } catch (err) {
         console.log(err.message);
