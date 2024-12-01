@@ -52,7 +52,7 @@ if(inputField){
     socket.on("saved" ,(data) =>{
             if(data.origin === origin){
                 if(!isTyping)
-                inputField.textContent = data.content;
+                inputField.innerHTML = data.content;
         }
     })
 }
