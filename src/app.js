@@ -10,6 +10,7 @@ const morgan = require("morgan");
 const app = express();
 
 dbConnect();
+app.use(morgan("dev"));
 app.use(mongooseSanitize());
 app.use(express.json());
 app.use(express.urlencoded({ extended:false }));
@@ -18,9 +19,16 @@ app.use(express.urlencoded({ extended:false }));
 app.set('view engine' ,'ejs');
 app.set('views' ,path.join(__dirname , 'views'));
 
+//do not cache only if in prod
+if(process.env.NODE_ENV === "development"){
+    app.set('view cache', false);
+}
+
+
 app.use(require("./routers/"))
 //serve statics file
 app.use(express.static(path.join(__dirname ,'public')));
+
 
 app.all("*" ,(req,res) => res.render("error"))
 app.use(errorHandler);

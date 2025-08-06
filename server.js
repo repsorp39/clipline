@@ -7,4 +7,4 @@ mongoose.connection.once('open' ,() =>{
     console.log("MongoDB now connected ...");
     initSocket(app);
     app.listen(PORT,()=> console.log(`Listening on port ${PORT}...`));
-})
+});

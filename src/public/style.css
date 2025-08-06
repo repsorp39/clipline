@@ -87,7 +87,7 @@ input{
 label{
     text-align: center;
     margin: 10px 0;
-    font-family: "Fantasy";
+    font-family: "RedHat";
 }
 
 button{
@@ -95,6 +95,7 @@ button{
     font-family: "Fantasy";
     border-radius: 9px;
     color: white;
+    cursor: pointer;
     background-color: hsl(217, 19%, 24%);
 }
 
