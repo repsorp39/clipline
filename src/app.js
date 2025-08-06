@@ -5,8 +5,10 @@ const errorHandler = require("./middleware/errorHandler");
 const path = require("path");
 const mongooseSanitize = require("express-mongo-sanitize");
 const { createServer } = require("http");
+const morgan = require("morgan");
 
 const app = express();
+
 dbConnect();
 app.use(mongooseSanitize());
 app.use(express.json());

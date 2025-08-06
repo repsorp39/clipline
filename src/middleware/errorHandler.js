@@ -1,6 +1,6 @@
 const debug = require('../utils/debug');
 
-const errorHandler = (err,req,res,next) =>{
+const errorHandler = (err, req, res, next) => {
     debug(err);
 }
 
